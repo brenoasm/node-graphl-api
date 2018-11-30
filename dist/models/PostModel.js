@@ -3,7 +3,7 @@ exports.__esModule = true;
 exports["default"] = (function (sequelize, DataTypes) {
     var Post = sequelize.define('Post', {
         id: {
-            type: DataTypes.NUMBER,
+            type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
             autoIncrement: true
