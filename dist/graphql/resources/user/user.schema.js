@@ -1,6 +1,6 @@
 "use strict";
 exports.__esModule = true;
-var userTypes = "\n\n  # User definition type\n  type User {\n    id: ID!\n    name: String!\n    email: String!\n    photo: String\n    createdAt: String!\n    updatedAt: String!\n  }\n\n  input UserCreateInput {\n    name: String!\n    email: String!\n    password: String!\n  }\n\n  input UserUpdateInput {\n    name: String!\n    email: String!\n    photo: String!\n  }\n\n  input UserUpdatePasswordInput {\n    password: String!\n  }\n\n";
+var userTypes = "\n\n  # User definition type\n  type User {\n    id: ID!\n    name: String!\n    email: String!\n    photo: String\n    createdAt: String!\n    updatedAt: String!\n    posts(first: Int, offset: Int): [ Post! ]!\n  }\n\n  input UserCreateInput {\n    name: String!\n    email: String!\n    password: String!\n  }\n\n  input UserUpdateInput {\n    name: String!\n    email: String!\n    photo: String!\n  }\n\n  input UserUpdatePasswordInput {\n    password: String!\n  }\n\n";
 exports.userTypes = userTypes;
 var userQueries = "\n\n    users(first: Int, offset: Int): [ User! ]!\n    user(id: ID!): User\n\n";
 exports.userQueries = userQueries;
